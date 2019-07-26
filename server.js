@@ -2,7 +2,11 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => res.json({ msg: 'Welcome to the Contact-App' }));
+app.get('/', (req, res) => res.json({ msg: 'Welcome to the Contact-App' })
+);
+
+// Define Routes
+
 
 const PORT = process.env.PORT || 5000;
 
