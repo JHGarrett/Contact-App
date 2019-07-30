@@ -1,6 +1,6 @@
 // function that has access to req and res to fire off in the header
 const jwt = require('jsonwebtoken');
-const config = require('congig');
+const config = require('config');
 
 module.exports = function(req, res, next) {
   // Get token from header
