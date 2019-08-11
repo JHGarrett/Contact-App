@@ -2,9 +2,9 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #003699;
+  --primary-color: #4b0779;
   --dark-color: #333333;
-  --light-color: #f4f4f4;
+  --light-color: #90939c;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: rgb(90, 86, 86);
   color: #333;
 }
 
@@ -93,7 +93,7 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: rgb(76, 75, 75) 1px dotted;
   margin: 0.7rem 0;
 }
 
@@ -275,7 +275,7 @@ img {
 .bg-white,
 .badge-white,
 .alert-white {
-  background: #fff;
+  background: rgb(124, 52, 52);
   color: #333;
   border: #ccc solid 1px;
 }
@@ -301,7 +301,7 @@ input {
 .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: #888;
+  color: rgb(136, 136, 136);
 }
 
 input[type='text'],
