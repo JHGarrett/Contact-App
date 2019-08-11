@@ -69,6 +69,10 @@ const ContactState = props => {
 
   // update contact
 
+  const updataeContact = contact => {
+    dispatch({ type: UPDATE_CONTACT, payload: contact });
+  };
+
   // filter contacts
 
   // clear filter
