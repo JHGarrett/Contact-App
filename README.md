@@ -13,4 +13,4 @@ Mongo Atlas
 Passport
 Express.JS
 JWT
-Mogoose
+Mongoose
