@@ -10,20 +10,28 @@ const Register = () => {
 
   const { name, email, password, password2 } = user;
 
+  const onSubmit = e => {
+    e.preventDefault();
+    console.log("Register Submit");
+  };
+
   const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
   return (
     <div className="form-container">
       <h1>
         Account <span className="text-primary">Register</span>
       </h1>
-      <form>
+
+      <form onSubmit={onsubmit}>
         <div className="form-group">
-          <label htmlFor="Name">
+          <label htmlFor="name">
+            Name
             <input type="text" name="name" value={name} onChange={onchange} />
           </label>
         </div>
         <div className="form-group">
           <label htmlFor="Email">
+            Email
             <input
               type="email"
               name="Email"
@@ -34,6 +42,7 @@ const Register = () => {
         </div>
         <div className="form-group">
           <label htmlFor="Password">
+            Password
             <input
               type="password"
               name="Password"
@@ -44,6 +53,7 @@ const Register = () => {
         </div>
         <div className="form-group">
           <label htmlFor="Password2">
+            Confirm Password
             <input
               type="password"
               name="password2"
