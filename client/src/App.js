@@ -20,15 +20,14 @@ const App = () => {
             <Fragment>
               <Navbar />
               <div className="container">
-                <Alerts>
-                  <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
+                <Alerts />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/login" component={Login} />
 
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/register" component={Register} />
-                  </Switch>
-                </Alerts>
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/register" component={Register} />
+                </Switch>
               </div>
             </Fragment>
           </Router>
