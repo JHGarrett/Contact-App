@@ -26,7 +26,7 @@ const Login = () => {
             Email
             <input
               type="email"
-              name="Email"
+              name="email"
               value={email}
               onChange={onChange}
             />
@@ -37,7 +37,7 @@ const Login = () => {
             Password
             <input
               type="password"
-              name="Password"
+              name="password"
               value={password}
               onChange={onChange}
             />
