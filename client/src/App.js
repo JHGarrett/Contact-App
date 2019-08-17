@@ -8,6 +8,7 @@ import AuthState from "./context/auth/AuthState";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import AlertState from "./context/alert/AlertState";
+import Alerts from "./components/layout/Alerts";
 import "./App.css";
 
 const App = () => {
@@ -19,13 +20,15 @@ const App = () => {
             <Fragment>
               <Navbar />
               <div className="container">
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/login" component={Login} />
+                <Alerts>
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/login" component={Login} />
 
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/register" component={Register} />
-                </Switch>
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/register" component={Register} />
+                  </Switch>
+                </Alerts>
               </div>
             </Fragment>
           </Router>
