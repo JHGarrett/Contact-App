@@ -24,8 +24,18 @@ const AuthState = props => {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
   // Load user
-  const loadUser = () => console.log("load user");
-
+  const loadUser = async () => {
+    // load token into global
+    try {
+      const res = await axios.get("/api/auth");
+      dispatch({
+        type: USER_LOADED,
+        payload: res.data
+      });
+    } catch (e) {
+      dispatch({ type: AUTH_ERROR });
+    }
+  };
   // Register user
   const register = async formData => {
     const config = {
