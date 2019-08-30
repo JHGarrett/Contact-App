@@ -82,8 +82,6 @@ const ContactState = props => {
     }
   };
 
-  // Clear Contacts
-  
   // Update Contact
   const updateContact = async contact => {
     const config = {
