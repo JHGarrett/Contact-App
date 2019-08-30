@@ -10,6 +10,7 @@ import {
   UPDATE_CONTACT,
   FILTER_CONTACTS,
   CLEAR_FILTER,
+  CONTACT_ERROR
 } from '../types';
 
 const ContactState = props => {
@@ -17,6 +18,7 @@ const ContactState = props => {
     contacts: [],
     current: null,
     filtered: null,
+    error: null
   };
 
   const [state, dispatch] = useReducer(contactReducer, initialState);
@@ -35,7 +37,6 @@ const ContactState = props => {
     } catch (err) {
       dispatch({ type: CONTACT_ERROR, payload: err.response.msg });
     }
-    dispatch({ type: ADD_CONTACT, payload: contact });
   };
 
   // delete contact
@@ -80,6 +81,7 @@ const ContactState = props => {
         contacts: state.contacts,
         current: state.current,
         filtered: state.filtered,
+        error: state.error,
         addContact,
         deleteContact,
         setCurrent,
