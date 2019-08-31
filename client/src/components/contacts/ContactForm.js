@@ -14,7 +14,7 @@ const ContactForm = () => {
         name: '',
         email: '',
         phone: '',
-        type: 'personal',
+        type: 'personal'
       });
     }
   }, [contactContext, current]);
@@ -23,7 +23,7 @@ const ContactForm = () => {
     name: '',
     email: '',
     phone: '',
-    type: 'personal',
+    type: 'personal'
   });
 
   const { name, email, phone, type } = contact;
@@ -107,6 +107,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-
-

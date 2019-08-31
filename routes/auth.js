@@ -6,7 +6,7 @@ const config = require('config');
 const auth = require('../middleware/auth');
 const { check, validationResult } = require('express-validator/check');
 
-const User = require('../models/Users');
+const User = require('../models/User');
 
 // @route     GET api/auth
 // @desc      Get logged in user
@@ -28,7 +28,7 @@ router.post(
   '/',
   [
     check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Password is required').exists(),
+    check('password', 'Password is required').exists()
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -53,15 +53,15 @@ router.post(
 
       const payload = {
         user: {
-          id: user.id,
-        },
+          id: user.id
+        }
       };
 
       jwt.sign(
         payload,
         config.get('jwtSecret'),
         {
-          expiresIn: 360000,
+          expiresIn: 360000
         },
         (err, token) => {
           if (err) throw err;

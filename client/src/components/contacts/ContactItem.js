@@ -22,7 +22,8 @@ const ContactItem = ({ contact }) => {
           className={
             'badge ' +
             (type === 'professional' ? 'badge-success' : 'badge-primary')
-          }>
+          }
+        >
           {type.charAt(0).toUpperCase() + type.slice(1)}
         </span>
       </h3>
@@ -41,7 +42,8 @@ const ContactItem = ({ contact }) => {
       <p>
         <button
           className='btn btn-dark btn-sm'
-          onClick={() => setCurrent(contact)}>
+          onClick={() => setCurrent(contact)}
+        >
           Edit
         </button>
         <button className='btn btn-danger btn-sm' onClick={onDelete}>
@@ -53,7 +55,7 @@ const ContactItem = ({ contact }) => {
 };
 
 ContactItem.propTypes = {
-  contact: PropTypes.object.isRequired,
+  contact: PropTypes.object.isRequired
 };
 
 export default ContactItem;

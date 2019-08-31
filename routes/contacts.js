@@ -3,7 +3,7 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const { check, validationResult } = require('express-validator/check');
 
-const User = require('../models/Users');
+const User = require('../models/User');
 const Contact = require('../models/Contact');
 
 // @route     GET api/contacts
@@ -12,7 +12,7 @@ const Contact = require('../models/Contact');
 router.get('/', auth, async (req, res) => {
   try {
     const contacts = await Contact.find({ user: req.user.id }).sort({
-      date: -1,
+      date: -1
     });
     res.json(contacts);
   } catch (err) {
@@ -31,8 +31,8 @@ router.post(
     [
       check('name', 'Name is required')
         .not()
-        .isEmpty(),
-    ],
+        .isEmpty()
+    ]
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -48,7 +48,7 @@ router.post(
         email,
         phone,
         type,
-        user: req.user.id,
+        user: req.user.id
       });
 
       const contact = await newContact.save();
