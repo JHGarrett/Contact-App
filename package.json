@@ -7,23 +7,30 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "install": "cd client && npm install",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"  },
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JHGarrett/Contact-App.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JHGarrett/Contact-App/issues"
+  },
+  "homepage": "https://github.com/JHGarrett/Contact-App#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.1.0",
+    "config": "^3.2.2",
     "express": "^4.17.1",
-    "express-validator": "^5.3.1",
+    "express-validator": "^6.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.5.11"
+    "mongoose": "^5.6.6"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.1",
     "nodemon": "^1.19.1"
   }
 }
