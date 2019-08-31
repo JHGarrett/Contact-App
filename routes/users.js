@@ -1,4 +1,3 @@
-// this will have the registration route
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -6,15 +5,15 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const { check, validationResult } = require('express-validator/check');
 
-const User = require('../models/Users');
+const User = require('../models/User');
 
-// @route   POST api/users
-// @desc    Register a user
-// @access  Public
+// @route     POST api/users
+// @desc      Regiter a user
+// @access    Public
 router.post(
   '/',
   [
-    check('name', 'Please add Name')
+    check('name', 'Please add name')
       .not()
       .isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
@@ -60,7 +59,7 @@ router.post(
         payload,
         config.get('jwtSecret'),
         {
-          expiresIn: 3600,
+          expiresIn: 360000,
         },
         (err, token) => {
           if (err) throw err;
