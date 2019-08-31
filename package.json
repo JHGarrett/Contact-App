@@ -9,31 +9,21 @@
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JHGarrett/Contact-App.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JHGarrett/Contact-App/issues"
-  },
-  "homepage": "https://github.com/JHGarrett/Contact-App#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.2.2",
+    "config": "^3.1.0",
     "express": "^4.17.1",
-    "express-validator": "^6.2.0",
+    "express-validator": "^5.3.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.6.6"
+    "mongoose": "^5.5.11"
   },
   "devDependencies": {
-    "concurrently": "^4.1.1",
+    "concurrently": "^4.1.0",
     "nodemon": "^1.19.1"
   }
 }
