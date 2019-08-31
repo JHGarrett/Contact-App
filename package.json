@@ -1,11 +1,15 @@
 {
   "name": "contact-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.6.0"
+  },
   "description": "Contact manager app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "build": "concurrently \"cd client && npm run build\" \"npm build \"",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
