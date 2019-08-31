@@ -8,6 +8,7 @@
     "npm": "6.x"
   },
   "scripts": {
+    "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "start": "node server.js",
     "server": "nodemon server.js",
